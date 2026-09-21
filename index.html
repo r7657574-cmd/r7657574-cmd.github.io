@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ruilin Wang's research portfolio: structured agent execution and theory-first method discovery.">
+  <meta name="theme-color" content="#f4f1e8">
+  <title>Ruilin Wang — Research Portfolio</title>
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <a class="brand" href="#top" aria-label="Ruilin Wang, home">
+      <span class="brand-mark" aria-hidden="true">RW</span>
+      <span>Ruilin Wang</span>
+    </a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#work">Work</a>
+      <a href="#directions">Directions</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">王瑞麟 · Research portfolio</p>
+        <h1>From scientific structure<br>to executable methods.</h1>
+        <p class="hero-lede">
+          I study agents that turn theory, experience, and explicit constraints into
+          auditable decisions—before a model is trained or an action is executed.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#work">Explore the work</a>
+          <a class="button button-quiet" href="https://github.com/r7657574-cmd" rel="me">GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="hero-diagram reveal" aria-label="Evidence, structure, decision, and execution research loop">
+        <div class="orbit orbit-a"></div>
+        <div class="orbit orbit-b"></div>
+        <div class="diagram-node node-evidence"><span>01</span>Evidence</div>
+        <div class="diagram-node node-structure"><span>02</span>Structure</div>
+        <div class="diagram-node node-decision"><span>03</span>Decision</div>
+        <div class="diagram-node node-execution"><span>04</span>Execution</div>
+        <div class="diagram-core">AUDIT<br>LOOP</div>
+      </div>
+    </section>
+
+    <section class="principle-strip" aria-label="Research principles">
+      <p>Source-grounded</p>
+      <p>Constraint-aware</p>
+      <p>Reproducible by design</p>
+      <p>Negative results retained</p>
+    </section>
+
+    <section class="section" id="work">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Selected work · 01—02</p>
+        <h2>Two projects, one research question</h2>
+        <p>How can an agent move from incomplete evidence to a method that is useful, inspectable, and safe to execute?</p>
+      </div>
+
+      <article class="project project-fuse reveal" id="fuse">
+        <div class="project-index">01</div>
+        <div class="project-intro">
+          <div class="project-meta">
+            <span class="tag tag-amber">Research prototype</span>
+            <span>Institute of Mathematics · Mathematical Mechanization Team · graduation project in progress</span>
+          </div>
+          <h3>FUSE</h3>
+          <p class="project-subtitle">Structured execution from empirical categories</p>
+          <p class="project-summary">
+            FUSE explores an agent paradigm that learns reusable, scoped regularities from
+            documents, interfaces, interactions, and counterexamples—then revalidates them
+            locally before acting in a new environment.
+          </p>
+          <div class="project-actions">
+            <a class="button button-primary" href="projects/fuse/">Explore the research direction</a>
+          </div>
+          <div class="release-note">
+            <strong>Public boundary</strong>
+            <span>Concepts only. The manuscript draft, research logs, and core implementation are not released.</span>
+          </div>
+        </div>
+        <div class="contribution-list" aria-label="FUSE core ideas">
+          <div class="contribution">
+            <span>1</span>
+            <div>
+              <h4>Category agents beyond a fixed ontology</h4>
+              <p>Categories are revised from operational consequences and future tasks, so the state distinctions, atomic actions, and relations remain tied to what an agent must actually do.</p>
+            </div>
+          </div>
+          <div class="contribution">
+            <span>2</span>
+            <div>
+              <h4>Empirical categories with scoped effects</h4>
+              <p>Local experience retains provenance, applicability, conflict, and dependency. Reusable conclusions can compose across tasks, while uncertainty becomes a concrete observation or validation request.</p>
+            </div>
+          </div>
+          <div class="contribution">
+            <span>3</span>
+            <div>
+              <h4>Mathematical representation as a guide</h4>
+              <p>Compositional representations expose missing observations and construction obligations. The longer-term aim is to turn those obligations into reliable plans for long-horizon agents and scientific workflows.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="project project-t2m reveal" id="theory2method">
+        <div class="project-index">02</div>
+        <div class="project-intro">
+          <div class="project-meta">
+            <span class="tag tag-blue">Abstract + core logic</span>
+            <span>Independent first-author work · manuscript under review</span>
+          </div>
+          <h3>Theory2Method</h3>
+          <p class="project-subtitle">Auditable Multi-Agent Reasoning for Theory-First PDE Solver Design</p>
+          <p class="project-summary">
+            A theory-first discovery workflow in which source-grounded mathematical structure determines
+            the representation, prediction target, and division of labor between analysis and learning.
+          </p>
+          <div class="project-actions">
+            <a class="button button-primary" href="projects/theory2method/">View core logic</a>
+            <button class="button button-quiet" type="button" data-dialog-open="t2m-abstract">Read abstract</button>
+          </div>
+          <div class="release-note">
+            <strong>Public boundary</strong>
+            <span>Only the abstract and a clean-room logical core are published. The paper, prompts, run traces, private validators, and experiment artifacts remain private.</span>
+          </div>
+        </div>
+        <div class="contribution-list" aria-label="Theory2Method core contributions">
+          <div class="contribution">
+            <span>1</span>
+            <div>
+              <h4>Theory before architecture</h4>
+              <p>Search original sources by premise match and computational relevance before choosing a solver family or neural architecture.</p>
+            </div>
+          </div>
+          <div class="contribution">
+            <span>2</span>
+            <div>
+              <h4>Typed unresolved computation</h4>
+              <p>Ground each theoretical result into valid structure and an unresolved computation whose type determines a numerical, learned, hybrid, or rejection route.</p>
+            </div>
+          </div>
+          <div class="contribution">
+            <span>3</span>
+            <div>
+              <h4>Auditable acceptance</h4>
+              <p>Freeze candidates before comparison, preserve evidence and failure signatures, and use deterministic gates so an attractive score cannot compensate for an invalid premise.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <section class="section directions" id="directions">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Research directions</p>
+        <h2>What comes next</h2>
+      </div>
+      <div class="direction-grid">
+        <article class="direction-card reveal">
+          <span class="direction-number">A</span>
+          <h3>FUSE beyond isolated tasks</h3>
+          <p>Build agents that carry scoped experience across long workflows, adapt it to unfamiliar tools and APIs, identify missing evidence, and verify locally before committing an action.</p>
+          <p class="direction-use"><strong>Potential settings:</strong> multi-tool automation, heterogeneous software workflows, scientific and engineering assistants.</p>
+        </article>
+        <article class="direction-card reveal">
+          <span class="direction-number">B</span>
+          <h3>Theory2Method beyond PDEs</h3>
+          <p>Generalize the theory-to-method workflow so mathematical structure can suggest better representations, decompositions, objectives, and validation criteria across scientific domains.</p>
+          <p class="direction-use"><strong>Target domains:</strong> optimization, image processing, operations research, and game-theoretic decision problems.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="contact-copy reveal">
+        <p class="eyebrow">Contact</p>
+        <h2>Interested in auditable agents or theory-guided methods?</h2>
+        <p>I welcome conversations about research collaboration and research internships.</p>
+      </div>
+      <div class="contact-links reveal">
+        <a href="mailto:wangruilin231@mails.ucas.ac.cn">wangruilin231@mails.ucas.ac.cn <span>↗</span></a>
+        <a href="https://github.com/r7657574-cmd" rel="me">github.com/r7657574-cmd <span>↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span data-year></span> Ruilin Wang</span>
+    <span>Core research snapshots, deliberately scoped.</span>
+  </footer>
+
+  <dialog class="abstract-dialog" id="t2m-abstract" aria-labelledby="abstract-title">
+    <div class="dialog-topline">
+      <p class="eyebrow">Public draft abstract</p>
+      <button class="dialog-close" type="button" data-dialog-close aria-label="Close abstract">×</button>
+    </div>
+    <h2 id="abstract-title">Theory2Method</h2>
+    <p>
+      Partial differential equations (PDEs) underpin models of transport, diffusion, fluids,
+      elasticity, and many other physical systems, while AI4PDE increasingly seeks reusable
+      learned solvers for parameterized PDE families. Most neural PDE pipelines, however,
+      select a representation or architecture before asking whether mathematical theory can
+      restructure the computation. We introduce Theory2Method, a multi-agent system in which
+      every task starts from the same frozen, task-independent taxonomy of broad theory
+      categories and the same original-source search environment. A Theory Search Agent
+      formulates queries, retrieves source passages, and selects results by premise match and
+      computational relevance; a Method Design Agent grounds the selected result into
+      solver-relevant structure, validity conditions, and a typed unresolved computation. A
+      deterministic type-aware selector then chooses a numerical or learned route, and coupled
+      validators assess theory-instance validity and method effectiveness. The resulting
+      portfolio includes exact numerical transformations, structure-guided learned methods,
+      and rejection of an inadmissible stochastic proposal. Across the retained learned routes,
+      the methods improve their prespecified matched comparators while satisfying the
+      corresponding theory-derived checks. These results show how source-grounded agent
+      reasoning can determine the representation, prediction target, and allocation between
+      analysis and learning before model training.
+    </p>
+    <p class="dialog-note">Only this abstract is public. The manuscript remains private while under review.</p>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
