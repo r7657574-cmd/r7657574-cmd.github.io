@@ -146,6 +146,8 @@ body { background: var(--paper); }
   gap: 12px;
 }
 
+#current-progress .application-grid { grid-template-columns: repeat(2, 1fr); }
+
 .application-grid article {
   padding: 22px;
   border-top: 3px solid var(--blue);
@@ -164,4 +166,5 @@ body { background: var(--paper); }
   .flow-five { grid-template-columns: 1fr; }
   .trust-grid { grid-template-columns: 1fr; }
   .application-grid { grid-template-columns: 1fr; }
+  #current-progress .application-grid { grid-template-columns: 1fr; }
 }
