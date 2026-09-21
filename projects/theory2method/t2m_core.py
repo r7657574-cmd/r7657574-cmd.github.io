@@ -1,9 +1,11 @@
-"""Minimal auditable core of a theory-first method-discovery workflow.
+"""Minimal core of a theory-to-method design workflow.
 
-The proposer may be a person, a language model, or another search process.  It is
-outside the trusted core.  This module records typed claims, freezes candidates,
-and applies conjunctive gates: one failed premise cannot be compensated by a
-high score elsewhere.
+The proposer may be a person, a language model, or another search process. This
+module records the selected theory, the solver-facing structure it creates, and
+the computation it leaves unresolved. That typed remainder determines the
+implementation route. Candidate identity and conjunctive evidence checks then
+support the audit: one failed premise cannot be compensated by a high score
+elsewhere.
 
 This is a clean public reconstruction, not the private experiment controller.
 """

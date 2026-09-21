@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Theory2Method public abstract and logical core.">
-  <title>Theory2Method — Ruilin Wang</title>
+  <meta name="description" content="Theory2Method: Auditable Multi-Agent Reasoning for Theory-First PDE Solver Design — public abstract and logical core.">
+  <title>Theory2Method: Auditable Multi-Agent Reasoning for Theory-First PDE Solver Design</title>
   <link rel="icon" href="../../assets/mark.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../../assets/project.css">
 </head>
@@ -12,9 +12,8 @@
   <header class="doc-header"><a class="back-link" href="../../#theory2method">← Back to portfolio</a></header>
   <main class="doc-main">
     <section class="doc-hero">
-      <p class="eyebrow">Independent first-author work · manuscript under review</p>
       <h1>Theory2Method</h1>
-      <p class="doc-lede">Auditable multi-agent reasoning for theory-first PDE solver design. Search agents may explore candidate ideas; a deterministic trusted core controls what can advance, what must be revised, and what should be rejected.</p>
+      <p class="doc-lede"><strong>Auditable Multi-Agent Reasoning for Theory-First PDE Solver Design.</strong> The workflow searches mathematical theory before choosing a solver, turns an applicable result into solver-relevant structure, and lets the computation left unresolved determine how the method should be built.</p>
       <div class="doc-actions">
         <a class="button button-primary" href="t2m_core.py">Open core module</a>
         <a class="button button-quiet" href="demo.py">Open demo</a>
@@ -23,47 +22,44 @@
     </section>
 
     <section class="doc-grid">
-      <h2>Core loop</h2>
-      <div class="flow flow-five" aria-label="Theory2Method workflow">
-        <div class="flow-step"><span>01</span><strong>Architecture-blind foundation pass</strong></div>
-        <div class="flow-step"><span>02</span><strong>Typed Theory IR and finite objects</strong></div>
-        <div class="flow-step"><span>03</span><strong>Mechanism freeze before prior audit</strong></div>
-        <div class="flow-step"><span>04</span><strong>Ordered, conjunctive evidence gates</strong></div>
-        <div class="flow-step"><span>05</span><strong>Validate, hold, reject, or open a new lineage</strong></div>
+      <h2>From theory to method</h2>
+      <div class="flow" aria-label="Theory2Method workflow">
+        <div class="flow-step"><span>01</span><strong>Search theory by assumption match and computational relevance</strong></div>
+        <div class="flow-step"><span>02</span><strong>Extract the structure that changes the solver problem</strong></div>
+        <div class="flow-step"><span>03</span><strong>Construct a route around the unresolved computation</strong></div>
+        <div class="flow-step"><span>04</span><strong>Validate mathematical applicability and method effectiveness</strong></div>
       </div>
     </section>
 
     <section class="doc-grid">
-      <h2>Trust split</h2>
+      <h2>Theory-to-method record</h2>
       <div class="trust-grid">
-        <article><span>Untrusted proposal layer</span><h3>Explore possibilities</h3><p>A language model, person, symbolic process, or replay mechanism may search literature, suggest theory links, and propose solver candidates.</p></article>
-        <article><span>Deterministic trusted core</span><h3>Control scientific authority</h3><p>Typed validation, candidate fingerprints, gate order, evidence requirements, and final decisions are checked without asking the proposer to judge itself.</p></article>
+        <article><span>What theory fixes</span><h3>Make the mathematical structure operational</h3><p>Record applicability conditions, a representation or transform, theory-determined relations, preserved properties, and the boundary beyond which the theory no longer applies.</p></article>
+        <article><span>What remains unresolved</span><h3>Give method design a precise target</h3><p>Type the remaining computation explicitly. Its form determines whether the implementation should be numerical, learned, hybrid, narrowed, or rejected.</p></article>
       </div>
     </section>
 
     <section class="doc-grid">
-      <h2>What the core enforces</h2>
+      <h2>What changes before training</h2>
       <ol>
-        <li><strong>Theory-instance validity:</strong> sources, premises, structural objects, and falsifiers must be explicit.</li>
-        <li><strong>Finite computational grounding:</strong> the theory must produce a solver-facing object and an identifying verifier.</li>
-        <li><strong>Measured headroom:</strong> a learned component is considered only when a real unresolved computation remains.</li>
-        <li><strong>Matched evidence:</strong> neural and hybrid routes need a matched comparator and a no-learning shadow.</li>
-        <li><strong>Fresh transfer checks:</strong> out-of-distribution or scale evidence is required before final validation.</li>
-        <li><strong>Immutable negative results:</strong> a failed frozen candidate becomes evidence; revisions start a new lineage.</li>
+        <li><strong>Representation:</strong> theory may transform the state, basis, coordinates, or domain in which the problem is solved.</li>
+        <li><strong>Prediction target:</strong> learning is assigned only to the relation that theory does not already determine.</li>
+        <li><strong>Computational allocation:</strong> exact analysis, numerical computation, and learning receive distinct responsibilities.</li>
+        <li><strong>Validity criteria:</strong> mathematical applicability and empirical performance are tested separately, so one cannot mask failure in the other.</li>
       </ol>
     </section>
 
     <section class="doc-grid">
       <h2>Public code</h2>
       <div>
-        <div class="code-file"><div><strong>t2m_core.py</strong><small>Typed contracts, candidate freeze, G0–G7 gates, staged decisions, and bounded revision obligations</small></div><a href="t2m_core.py">View →</a></div>
-        <div class="code-file"><div><strong>demo.py</strong><small>A minimal hybrid candidate that passes the declared evidence gates</small></div><a href="demo.py">View →</a></div>
+        <div class="code-file"><div><strong>t2m_core.py</strong><small>Typed theory records, unresolved-computation routes, candidate identity, evidence checks, and bounded revision</small></div><a href="t2m_core.py">View →</a></div>
+        <div class="code-file"><div><strong>demo.py</strong><small>A compact example showing how a theory-grounded hybrid method is recorded and evaluated</small></div><a href="demo.py">View →</a></div>
       </div>
     </section>
 
     <section class="doc-grid">
       <h2>Abstract</h2>
-      <p class="abstract-copy">Partial differential equations (PDEs) underpin models of transport, diffusion, fluids, elasticity, and many other physical systems, while AI4PDE increasingly seeks reusable learned solvers for parameterized PDE families. Most neural PDE pipelines, however, select a representation or architecture before asking whether mathematical theory can restructure the computation. We introduce Theory2Method, a multi-agent system in which every task starts from the same frozen, task-independent taxonomy of broad theory categories and the same original-source search environment. A Theory Search Agent formulates queries, retrieves source passages, and selects results by premise match and computational relevance; a Method Design Agent grounds the selected result into solver-relevant structure, validity conditions, and a typed unresolved computation. A deterministic type-aware selector then chooses a numerical or learned route, and coupled validators assess theory-instance validity and method effectiveness. The resulting portfolio includes exact numerical transformations, structure-guided learned methods, and rejection of an inadmissible stochastic proposal. Across the retained learned routes, the methods improve their prespecified matched comparators while satisfying the corresponding theory-derived checks. These results show how source-grounded agent reasoning can determine the representation, prediction target, and allocation between analysis and learning before model training.</p>
+      <p class="abstract-copy">Partial differential equations (PDEs) underpin models of transport, diffusion, fluids, elasticity, and many other physical systems, while AI4PDE increasingly seeks reusable learned solvers for parameterized PDE families. Most neural PDE pipelines, however, select a representation or model architecture before determining whether mathematical theory can fundamentally restructure the computational problem. We introduce Theory2Method, a multi-agent system that uses mathematical theory upstream of solver selection. All tasks start from the same task-independent taxonomy of broad mathematical theory categories and a common original-source search environment. A Theory Search Agent retrieves candidate mathematical results and selects theories whose assumptions match the target PDE and whose conclusions have plausible computational relevance. A Method Design Agent then grounds the selected theory into solver-relevant computational structure, applicability conditions, and a typed unresolved computation. A deterministic type-aware selector uses this unresolved computation to choose a numerical or learned implementation route, while coupled validators assess both theory-instance validity and method effectiveness. Across a diverse PDE portfolio, the resulting methods include exact numerical transformations, structure-guided learned solvers, and rejection of mathematically inadmissible proposals. The retained learned methods improve their prespecified matched comparators while satisfying the corresponding theory-derived validity conditions. These results demonstrate a practical role for large language model agents in AI4PDE beyond architecture or hyperparameter search: using mathematical theory to determine the representation, prediction target, and computational allocation before model training.</p>
     </section>
 
     <section class="doc-grid">

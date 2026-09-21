@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Multi-Agent Large Language Models for Connectivity Restoration in Damaged Graphs — manuscript and public core logic.">
+  <title>Multi-Agent Large Language Models for Connectivity Restoration in Damaged Graphs</title>
+  <link rel="icon" href="../../assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../assets/project.css">
+</head>
+<body>
+  <header class="doc-header"><a class="back-link" href="../../#graph-repair">← Back to portfolio</a></header>
+  <main class="doc-main">
+    <section class="doc-hero">
+      <h1 class="long-heading">Multi-Agent Large Language Models for Connectivity Restoration in Damaged Graphs</h1>
+      <p class="doc-lede">Intent-aware repair begins with the graph itself: damaged components, spatial costs, forbidden edges, and required connections become a shared structural record. Natural-language preferences are then converted into explicit objectives, candidate edit plans are compared on graph copies, and the selected repair is checked against the original constraints.</p>
+      <div class="doc-actions">
+        <a class="button button-primary" href="manuscript.pdf">Read manuscript</a>
+        <a class="button button-quiet" href="graph_repair_core.py">Open core module</a>
+        <a class="button button-quiet" href="demo.py">Open demo</a>
+        <a class="button button-quiet" href="README.md">Read code notes</a>
+      </div>
+    </section>
+
+    <section class="doc-grid">
+      <h2>Graph-centered workflow</h2>
+      <div class="flow" aria-label="Graph connectivity restoration workflow">
+        <div class="flow-step"><span>01</span><strong>Extract damaged topology and hard edge constraints</strong></div>
+        <div class="flow-step"><span>02</span><strong>Translate intent into graph-level objectives and trade-offs</strong></div>
+        <div class="flow-step"><span>03</span><strong>Construct and compare transparent repair plans</strong></div>
+        <div class="flow-step"><span>04</span><strong>Apply edits on a copy and validate the repaired graph</strong></div>
+      </div>
+    </section>
+
+    <section class="doc-grid">
+      <h2>Core contribution</h2>
+      <div class="concept-stack">
+        <article class="concept-card"><span>Structure</span><h3>Make the graph the common language</h3><p>The decision state is expressed through components, positions, path structure, forbidden edges, and required connections. Semantic interpretation is useful only when it resolves into these checkable graph objects.</p></article>
+        <article class="concept-card"><span>Intent</span><h3>Turn preferences into explicit optimization signals</h3><p>Requests for low cost, low latency, reliable connectivity, or redundancy become visible priorities. This makes the trade-off behind a selected strategy inspectable instead of hiding it inside prose.</p></article>
+        <article class="concept-card"><span>Repair</span><h3>Select a graph edit plan, not arbitrary code</h3><p>Bridge, component-tree, and latency operators share one interface. New behavior can be formed by bounded composition of those operators, then evaluated and verified under the same constraints.</p></article>
+      </div>
+    </section>
+
+    <section class="doc-grid">
+      <h2>Public core</h2>
+      <div>
+        <div class="code-file"><div><strong>graph_repair_core.py</strong><small>Graph profiling, intent grounding, constraint normalization, candidate construction, strategy comparison, and post-repair validation</small></div><a href="graph_repair_core.py">View →</a></div>
+        <div class="code-file"><div><strong>demo.py</strong><small>A disconnected graph with forbidden and required edges, repaired through the same public interface</small></div><a href="demo.py">View →</a></div>
+        <div class="code-file"><div><strong>requirements.txt</strong><small>The single runtime dependency used by this snapshot</small></div><a href="requirements.txt">View →</a></div>
+      </div>
+    </section>
+
+    <section class="doc-grid">
+      <h2>Safety boundary</h2>
+      <div class="trust-grid">
+        <article><span>Proposal layer</span><h3>Interpret and suggest</h3><p>A language model or person may propose intent weights or a strategy composition, but the proposal is reduced to typed values and known graph operators.</p></article>
+        <article><span>Graph core</span><h3>Execute and verify</h3><p>The public core never imports generated modules. It edits a graph copy, rejects infeasible plans, and checks connectivity, forbidden-edge violations, and required connections after repair.</p></article>
+      </div>
+    </section>
+
+    <section class="doc-grid">
+      <h2>Project summary</h2>
+      <p class="abstract-copy">Connectivity restoration is treated as a constrained decision over the damaged graph rather than as unconstrained code generation. The workflow first grounds natural-language intent in graph-level priorities such as connectivity, construction cost, and path efficiency. It then extracts the topology and hard edge constraints, compares minimum-spanning-tree, bridge, and latency-oriented repair plans, and validates the selected edits on the resulting graph. This formulation keeps the strategy space explicit while allowing the decision process to adapt to heterogeneous damage patterns and user objectives. Evaluation on synthetic and real-world networks studies intent alignment, zero-shot repair behavior, and the complementary value of semantic grounding and structural validation relative to heuristic and reinforcement-learning baselines.</p>
+    </section>
+
+    <section class="doc-grid">
+      <h2>Release boundary</h2>
+      <div class="boundary"><strong>Manuscript and logical core.</strong><p>The public snapshot deliberately omits provider integration, private prompts, datasets, reinforcement-learning code, generated files, raw traces, and the full experimental harness.</p></div>
+    </section>
+  </main>
+</body>
+</html>

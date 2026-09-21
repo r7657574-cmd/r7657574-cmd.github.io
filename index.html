@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Ruilin Wang's research portfolio: structured agent execution and theory-first method discovery.">
+  <meta name="description" content="Ruilin Wang's research portfolio: structure-guided agents, theory-to-method design, and intent-aware graph repair.">
   <meta name="theme-color" content="#f4f1e8">
   <title>Ruilin Wang — Research Portfolio</title>
   <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
@@ -27,11 +27,10 @@
   <main id="main">
     <section class="hero" id="top">
       <div class="hero-copy reveal">
-        <p class="eyebrow">王瑞麟 · Research portfolio</p>
-        <h1>From scientific structure<br>to executable methods.</h1>
+        <h1>Find the structure that makes hard problems solvable.</h1>
         <p class="hero-lede">
-          I study agents that turn theory, experience, and explicit constraints into
-          auditable decisions—before a model is trained or an action is executed.
+          I study how agents turn theory, experience, and graph structure into methods for
+          hard problems—while keeping assumptions, choices, and failures open to inspection.
         </p>
         <div class="hero-actions">
           <a class="button button-primary" href="#work">Explore the work</a>
@@ -39,38 +38,25 @@
         </div>
       </div>
 
-      <div class="hero-diagram reveal" aria-label="Evidence, structure, decision, and execution research loop">
+      <div class="hero-diagram reveal" aria-label="Evidence, structure, method, and validation research loop">
         <div class="orbit orbit-a"></div>
         <div class="orbit orbit-b"></div>
         <div class="diagram-node node-evidence"><span>01</span>Evidence</div>
         <div class="diagram-node node-structure"><span>02</span>Structure</div>
-        <div class="diagram-node node-decision"><span>03</span>Decision</div>
-        <div class="diagram-node node-execution"><span>04</span>Execution</div>
-        <div class="diagram-core">AUDIT<br>LOOP</div>
+        <div class="diagram-node node-decision"><span>03</span>Method</div>
+        <div class="diagram-node node-execution"><span>04</span>Validation</div>
+        <div class="diagram-core">STRUCTURE<br>LOOP</div>
       </div>
-    </section>
-
-    <section class="principle-strip" aria-label="Research principles">
-      <p>Source-grounded</p>
-      <p>Constraint-aware</p>
-      <p>Reproducible by design</p>
-      <p>Negative results retained</p>
     </section>
 
     <section class="section" id="work">
       <div class="section-heading reveal">
-        <p class="eyebrow">Selected work · 01—02</p>
-        <h2>Two projects, one research question</h2>
-        <p>How can an agent move from incomplete evidence to a method that is useful, inspectable, and safe to execute?</p>
+        <h2>Three projects, one research question</h2>
+        <p>How can an agent identify the right structure before choosing or constructing a method?</p>
       </div>
 
       <article class="project project-fuse reveal" id="fuse">
-        <div class="project-index">01</div>
         <div class="project-intro">
-          <div class="project-meta">
-            <span class="tag tag-amber">Research prototype</span>
-            <span>Institute of Mathematics · Mathematical Mechanization Team · graduation project in progress</span>
-          </div>
           <h3>FUSE</h3>
           <p class="project-subtitle">Structured execution from empirical categories</p>
           <p class="project-summary">
@@ -112,17 +98,12 @@
       </article>
 
       <article class="project project-t2m reveal" id="theory2method">
-        <div class="project-index">02</div>
         <div class="project-intro">
-          <div class="project-meta">
-            <span class="tag tag-blue">Abstract + core logic</span>
-            <span>Independent first-author work · manuscript under review</span>
-          </div>
           <h3>Theory2Method</h3>
           <p class="project-subtitle">Auditable Multi-Agent Reasoning for Theory-First PDE Solver Design</p>
           <p class="project-summary">
-            A theory-first discovery workflow in which source-grounded mathematical structure determines
-            the representation, prediction target, and division of labor between analysis and learning.
+            A theory-first workflow that searches for applicable mathematics, translates it into
+            solver-relevant structure, and lets the remaining computation determine the method.
           </p>
           <div class="project-actions">
             <a class="button button-primary" href="projects/theory2method/">View core logic</a>
@@ -138,21 +119,62 @@
             <span>1</span>
             <div>
               <h4>Theory before architecture</h4>
-              <p>Search original sources by premise match and computational relevance before choosing a solver family or neural architecture.</p>
+              <p>Search original sources by premise match and computational relevance before choosing a solver family or model architecture.</p>
             </div>
           </div>
           <div class="contribution">
             <span>2</span>
             <div>
               <h4>Typed unresolved computation</h4>
-              <p>Ground each theoretical result into valid structure and an unresolved computation whose type determines a numerical, learned, hybrid, or rejection route.</p>
+              <p>Record applicability, representation, theory-fixed relations, preserved properties, and the unresolved computation that determines the numerical or learned route.</p>
             </div>
           </div>
           <div class="contribution">
             <span>3</span>
             <div>
-              <h4>Auditable acceptance</h4>
-              <p>Freeze candidates before comparison, preserve evidence and failure signatures, and use deterministic gates so an attractive score cannot compensate for an invalid premise.</p>
+              <h4>Method construction and dual validation</h4>
+              <p>Construct the method around what theory leaves unresolved, then evaluate mathematical validity separately from computational effectiveness.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="project project-graph reveal" id="graph-repair">
+        <div class="project-intro">
+          <h3 class="long-title">Multi-Agent Large Language Models for Connectivity Restoration in Damaged Graphs</h3>
+          <p class="project-subtitle">Intent-aware structural repair for damaged graphs</p>
+          <p class="project-summary">
+            A graph-repair workflow that grounds natural-language intent in the damaged topology,
+            explicit edge constraints, and transparent repair objectives before selecting a strategy.
+          </p>
+          <div class="project-actions">
+            <a class="button button-primary" href="projects/graph-connectivity/">Explore the project</a>
+          </div>
+          <div class="release-note">
+            <strong>Public boundary</strong>
+            <span>The manuscript and a compact, safety-hardened core are public. Provider code, private prompts, datasets, and the full experiment harness are omitted.</span>
+          </div>
+        </div>
+        <div class="contribution-list" aria-label="Graph connectivity restoration core contributions">
+          <div class="contribution">
+            <span>1</span>
+            <div>
+              <h4>Graph structure as shared evidence</h4>
+              <p>Connected components, positions, forbidden edges, and required connections define the repair state; decisions are grounded in these objects rather than inferred from prose alone.</p>
+            </div>
+          </div>
+          <div class="contribution">
+            <span>2</span>
+            <div>
+              <h4>Intent becomes explicit objectives</h4>
+              <p>Preferences such as low cost or low latency are translated into inspectable priorities over connectivity, added edge length, path efficiency, and robustness.</p>
+            </div>
+          </div>
+          <div class="contribution">
+            <span>3</span>
+            <div>
+              <h4>Plans are selected and verified on the graph</h4>
+              <p>Transparent bridge, component-tree, latency, and compositional candidates are compared on graph copies; the selected edit plan is checked again against connectivity and hard constraints.</p>
             </div>
           </div>
         </div>
@@ -162,7 +184,6 @@
 
     <section class="section directions" id="directions">
       <div class="section-heading reveal">
-        <p class="eyebrow">Research directions</p>
         <h2>What comes next</h2>
       </div>
       <div class="direction-grid">
@@ -183,7 +204,6 @@
 
     <section class="contact section" id="contact">
       <div class="contact-copy reveal">
-        <p class="eyebrow">Contact</p>
         <h2>Interested in auditable agents or theory-guided methods?</h2>
         <p>I welcome conversations about research collaboration and research internships.</p>
       </div>
@@ -201,7 +221,6 @@
 
   <dialog class="abstract-dialog" id="t2m-abstract" aria-labelledby="abstract-title">
     <div class="dialog-topline">
-      <p class="eyebrow">Public draft abstract</p>
       <button class="dialog-close" type="button" data-dialog-close aria-label="Close abstract">×</button>
     </div>
     <h2 id="abstract-title">Theory2Method</h2>
@@ -209,21 +228,25 @@
       Partial differential equations (PDEs) underpin models of transport, diffusion, fluids,
       elasticity, and many other physical systems, while AI4PDE increasingly seeks reusable
       learned solvers for parameterized PDE families. Most neural PDE pipelines, however,
-      select a representation or architecture before asking whether mathematical theory can
-      restructure the computation. We introduce Theory2Method, a multi-agent system in which
-      every task starts from the same frozen, task-independent taxonomy of broad theory
-      categories and the same original-source search environment. A Theory Search Agent
-      formulates queries, retrieves source passages, and selects results by premise match and
-      computational relevance; a Method Design Agent grounds the selected result into
-      solver-relevant structure, validity conditions, and a typed unresolved computation. A
-      deterministic type-aware selector then chooses a numerical or learned route, and coupled
-      validators assess theory-instance validity and method effectiveness. The resulting
-      portfolio includes exact numerical transformations, structure-guided learned methods,
-      and rejection of an inadmissible stochastic proposal. Across the retained learned routes,
-      the methods improve their prespecified matched comparators while satisfying the
-      corresponding theory-derived checks. These results show how source-grounded agent
-      reasoning can determine the representation, prediction target, and allocation between
-      analysis and learning before model training.
+      select a representation or model architecture before determining whether mathematical
+      theory can fundamentally restructure the computational problem. We introduce
+      Theory2Method, a multi-agent system that uses mathematical theory upstream of solver
+      selection. All tasks start from the same task-independent taxonomy of broad mathematical
+      theory categories and a common original-source search environment. A Theory Search Agent
+      retrieves candidate mathematical results and selects theories whose assumptions match the
+      target PDE and whose conclusions have plausible computational relevance. A Method Design
+      Agent then grounds the selected theory into solver-relevant computational structure,
+      applicability conditions, and a typed unresolved computation. A deterministic type-aware
+      selector uses this unresolved computation to choose a numerical or learned implementation
+      route, while coupled validators assess both theory-instance validity and method
+      effectiveness. Across a diverse PDE portfolio, the resulting methods include exact
+      numerical transformations, structure-guided learned solvers, and rejection of
+      mathematically inadmissible proposals. The retained learned methods improve their
+      prespecified matched comparators while satisfying the corresponding theory-derived
+      validity conditions. These results demonstrate a practical role for large language model
+      agents in AI4PDE beyond architecture or hyperparameter search: using mathematical theory
+      to determine the representation, prediction target, and computational allocation before
+      model training.
     </p>
     <p class="dialog-note">Only this abstract is public. The manuscript remains private while under review.</p>
   </dialog>

@@ -1,18 +1,17 @@
-# Theory2Method — public logical core
+# Theory2Method: Auditable Multi-Agent Reasoning for Theory-First PDE Solver Design
 
-Theory2Method is a theory-first workflow for turning source-grounded mathematics into a numerical, neural, hybrid, or rejection decision. This directory exposes only a clean reconstruction of its audit logic.
+Theory2Method is a theory-first workflow for turning source-grounded mathematics into a numerical, learned, hybrid, narrowed, or rejection route. This directory exposes only a clean reconstruction of the workflow's logical core.
 
-## Trusted boundary
+## Theory-to-method design
 
-The proposer can be an LLM, a person, symbolic search, or replay. It does not receive execution authority. The trusted core:
+The public core represents four parts of the design:
 
-1. records a typed theory card with premises, solver-facing structure, an unresolved computation, and a falsifier;
-2. freezes a candidate before prior-art comparison;
-3. requires route-specific evidence through the ordered `G0`–`G7` gates;
-4. derives only the next authorized stage—pilot, matched training, transfer/scale evaluation, or final decision;
-5. compiles evidenced failures into bounded obligations for a new lineage instead of editing the frozen parent.
+1. search results are recorded with sources and applicability conditions;
+2. the selected theory is translated into a representation, theory-fixed relations, preserved properties, a validity boundary, and a typed unresolved computation;
+3. the unresolved computation determines the numerical, neural, hybrid, or rejection route;
+4. theory-instance validity and method effectiveness are evaluated separately.
 
-Neural and hybrid routes additionally require a matched comparator and a no-learning shadow. A failed premise cannot be offset by a stronger downstream score.
+The implementation keeps candidate identity and ordered evidence checks as supporting audit machinery. Those checks serve the theory-to-method design; they are not the research objective by themselves. Neural and hybrid routes additionally require a matched comparator and a no-learning shadow, and a failed mathematical premise cannot be offset by a stronger downstream score.
 
 ## Run
 
