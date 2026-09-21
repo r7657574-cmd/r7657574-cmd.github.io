@@ -47,17 +47,24 @@
     </section>
 
     <section class="doc-grid">
-      <h2>Execution loop</h2>
-      <div class="fuse-flow" aria-label="FUSE execution loop">
-        <div class="fuse-step"><span>1</span><strong>Observe locally</strong><small>documents, interfaces, state changes, failures</small></div>
-        <div class="fuse-arrow" aria-hidden="true">→</div>
-        <div class="fuse-step"><span>2</span><strong>Induce structure</strong><small>states, operations, relations, open ports</small></div>
-        <div class="fuse-arrow" aria-hidden="true">→</div>
-        <div class="fuse-step"><span>3</span><strong>Compose cautiously</strong><small>reuse scoped rules; surface missing evidence</small></div>
-        <div class="fuse-arrow" aria-hidden="true">→</div>
-        <div class="fuse-step"><span>4</span><strong>Certify in target</strong><small>bind identities, permissions, effects, readback</small></div>
-        <div class="fuse-arrow" aria-hidden="true">→</div>
-        <div class="fuse-step"><span>5</span><strong>Execute and revise</strong><small>act, verify, refuse, roll back, or update scope</small></div>
+      <h2>Two progress directions</h2>
+      <div>
+        <p class="pull-quote">FUSE studies how an agent can turn knowledge scattered across documents, interfaces, and experience into a small set of useful, composable regularities.</p>
+        <p>Its research advances along two connected directions: learning an empirical structure that an agent can act on, and using mathematical representations to guide what the agent should investigate next.</p>
+        <div class="concept-stack">
+          <article class="concept-card">
+            <span>Direction I</span>
+            <h3>Empirical structures for agents</h3>
+            <p>An ontology offers a vocabulary for describing a domain. FUSE asks how that vocabulary should change when an operation behaves differently, two apparently identical states admit different futures, or a relation holds in one context but not another. Objects are grounded in distinctions that matter for action; morphisms describe executable changes and observations; relations constrain how those changes compose. Language proposes an initial account, while behavior and counterexamples revise objects, operations, and relations together.</p>
+            <p>Source-local knowledge remains attached to its evidence, while shared libraries organize scoped patterns that may help with unfamiliar tasks. A planner can retrieve a partial structure, derive its consequences, request a missing observation, and bind the result to the current environment. The aim is to discover sparse cross-source regularities that improve real tasks rather than merely accumulate a larger graph. Mathematical-representation search remains outside this direction.</p>
+          </article>
+          <article class="concept-card">
+            <span>Direction II</span>
+            <h3>Representations that guide discovery</h3>
+            <p>Starting from an empirical category, this direction asks which mathematical representation makes a problem clearer. A candidate decomposition, invariant, or compatibility condition can reveal which state distinction is missing and which experiment would resolve it. New observations then revise both the representation and the proposed construction.</p>
+            <p>The intended outcome is a useful explanation, design, or construction with an explicit route back to the empirical system. No single target category is prescribed, and no advantage over an equally informed general solver is assumed. The central question is whether representation-guided induction reduces the work needed to obtain a reliable result.</p>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -67,19 +74,6 @@
         <article><h3>Long-horizon tool use</h3><p>Carry useful experience across tasks while rechecking the current resource, permission, and postcondition before action.</p></article>
         <article><h3>Heterogeneous workflows</h3><p>Align partial knowledge from different APIs and implementations into reusable operations without erasing source-specific constraints.</p></article>
         <article><h3>Scientific workflows</h3><p>Use mathematical structure to formulate the next observation, construction, or validation needed for a defensible method.</p></article>
-      </div>
-    </section>
-
-    <section class="doc-grid">
-      <h2>Research boundary</h2>
-      <div class="boundary">
-        <strong>What this page does—and does not—claim.</strong>
-        <ul>
-          <li>FUSE is an active research direction, not a production-ready autonomous agent.</li>
-          <li>It does not yet establish general open-world ontology discovery.</li>
-          <li>Category-theoretic structure is evaluated as an operational representation; information-equivalent generic methods remain necessary baselines.</li>
-          <li>Mathematical-representation-guided discovery across optimization, imaging, operations research, and games is a planned direction, not a completed result.</li>
-        </ul>
       </div>
     </section>
 
