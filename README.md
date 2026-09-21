@@ -12,16 +12,6 @@ The site has no analytics, remote JavaScript, build system, or external font dep
 
 The published homepage is available at <https://r7657574-cmd.github.io/>.
 
-## Optional local preview
-
-After cloning the repository, run the following command from the repository root:
-
-```bash
-python -m http.server 8000
-```
-
-Then open `http://localhost:8000`. This address works only while the local server is running; it is separate from the public GitHub Pages URL.
-
 ## Publication boundaries
 
 This repository intentionally excludes unpublished manuscripts, private prompts and validators, credentials, raw run traces, datasets, full experiment harnesses, and model-provider configuration. The code directories are research snapshots rather than complete reproduction packages.
