@@ -35,6 +35,7 @@
   <div class="eyebrow">CHINESE LITERARY PERCEPTION</div>
   <h1>文学与感知</h1>
   <div class="subtitle">中文长篇小说 · 创作研究</div>
+  <nav aria-label="项目导航"><a href="usage.html">使用指南</a><a href="platform.html">作品生成平台</a><a href="https://github.com/r7657574-cmd/r7657574-cmd.github.io/tree/main/projects/literary-perception">GitHub 展示目录</a></nav>
   <section class="intro" aria-label="研究介绍">
     <p>语言模型已经能够从一个要求出发，生成流畅的文字。文学写作涉及更细微的表达差别：同一个词、一次停顿、一个被人物注意或忽略的物件，都可能改变阅读感受。相较于代码和数学，文学的目标与评价更开放，也更难形成清楚的验证闭环。我们因此研究更充分的 harness，让创作依据、人物状态、情节推进与编辑审读共同约束作品。</p>
     <p>文学除了已有文字的规范，还需要与生活相连的感知。我们尝试参照具身世界模型、VLM 与多智能体领域的思路，在写作中加入模拟想象、感知和相互回应：环境自行变化，各个人物带着不同的身体条件、经历和目的，感知彼此及外界，再作出自己的行动。身体余效与环境背景、氛围共同影响注意、词语、句群和对白，让人物处境进入文字气质。这些材料也可以进入记忆、隐喻与其他文学表达，使模型持续关注故事中的关系。目前使用局部多人规则模拟与文本 embedding；多模态感知仍是研究方向。</p>
@@ -42,16 +43,25 @@
   </section>
   <section class="samples" aria-labelledby="sample-title">
     <h2 id="sample-title">《炉下有河》</h2>
-    <div class="note">工业玄幻 · 悬疑对抗 · 长篇开篇节选</div>
+    <div class="note">工业玄幻 · 悬疑对抗 · 十章完整开篇</div>
     <div class="note">AI辅助创作，经过编辑审读。样例是研究中的作品。</div>
     <nav aria-label="样例阅读">
       <a href="samples/ch01.txt" data-sample="ch01" data-title="第一章 四辆都上去了">阅读第一章</a>
+      <a href="samples/ch02.txt" data-sample="ch02" data-title="第二章">第二章</a>
+      <a href="samples/ch03.txt" data-sample="ch03" data-title="第三章">第三章</a>
+      <a href="samples/ch04.txt" data-sample="ch04" data-title="第四章">第四章</a>
+      <a href="samples/ch05.txt" data-sample="ch05" data-title="第五章">第五章</a>
+      <a href="samples/ch06.txt" data-sample="ch06" data-title="第六章">第六章</a>
       <a href="samples/ch07.txt" data-sample="ch07" data-title="第七章 这回他来取">阅读第七章</a>
+      <a href="samples/ch08.txt" data-sample="ch08" data-title="第八章">第八章</a>
+      <a href="samples/ch09.txt" data-sample="ch09" data-title="第九章">第九章</a>
+      <a href="samples/ch10.txt" data-sample="ch10" data-title="第十章">第十章</a>
     </nav>
+    <p class="note"><a href="samples/under-furnace.txt" download>下载十章全文</a></p>
     <div class="note reader-status" id="status" role="status" aria-live="polite">选择一章阅读；链接也可以直接打开纯文字样例。</div>
     <article id="reading" aria-label="作品正文"></article>
   </section>
-  <footer>公开页面展示研究方向与作品样例。作品试用平台目前为本地原型，尚未开放公众服务。</footer>
+  <footer>用户无需提供特定提示或指定参考文章，即可由系统提出原创方向。内部使用创作说明、harness 与文学机制研究。完整流程保持私有；公开页面提供作品、指南与平台说明。</footer>
 </main>
 <script>
 const reading = document.getElementById("reading");
