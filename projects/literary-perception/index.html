@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="中文文学写作研究：以创作约束、模拟感知与编辑审读，探索持续阅读和文学表达的共同发展。">
+  <meta name="AI-Generated" content="项目样例含AI辅助创作文本，经过编辑审读">
+  <title>文学与感知 · Chinese Literary Perception</title>
+  <style>
+    :root { color-scheme: light dark; --paper:#f6f3ec; --ink:#272822; --muted:#62665c; --line:#d8d6cc; --accent:#37614b; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:system-ui,"Microsoft YaHei",sans-serif; }
+    main { max-width:900px; margin:auto; padding:64px 28px 80px; }
+    .eyebrow { font-size:12px; letter-spacing:2px; color:var(--accent); }
+    h1 { font-size:clamp(32px,6vw,56px); font-weight:600; letter-spacing:2px; margin:18px 0 12px; }
+    .subtitle { color:var(--muted); margin-bottom:36px; }
+    .intro p { font-size:18px; line-height:1.95; margin:0 0 24px; }
+    .samples { border-top:1px solid var(--line); margin-top:42px; padding-top:28px; }
+    h2 { font-size:26px; font-weight:500; }
+    .note { color:var(--muted); font-size:14px; line-height:1.8; }
+    nav { display:flex; gap:12px; flex-wrap:wrap; margin:24px 0; }
+    a { color:var(--accent); text-decoration-thickness:1px; text-underline-offset:4px; }
+    nav a { padding:10px 16px; border:1px solid var(--line); border-radius:4px; text-decoration:none; }
+    #reading { max-width:720px; margin:32px auto 0; font-family:"Noto Serif SC","Songti SC","SimSun",serif; font-size:19px; line-height:2; }
+    #reading h3 { font-size:24px; margin:36px 0 22px; }
+    #reading p { margin:0 0 18px; }
+    .reader-status { min-height:24px; }
+    footer { margin-top:48px; padding-top:20px; border-top:1px solid var(--line); color:var(--muted); font-size:13px; line-height:1.8; }
+    @media (prefers-color-scheme:dark) { :root { --paper:#1c211d; --ink:#e3e5de; --muted:#b2b9ac; --line:#465045; --accent:#aed4b8; } }
+    @media (max-width:560px) { main { padding:36px 20px 56px; } .intro p { font-size:17px; } #reading { font-size:18px; } }
+  </style>
+</head>
+<body>
+<main>
+  <div class="eyebrow">CHINESE LITERARY PERCEPTION</div>
+  <h1>文学与感知</h1>
+  <div class="subtitle">中文长篇小说 · 创作研究</div>
+  <section class="intro" aria-label="研究介绍">
+    <p>语言模型已经能够从一个要求出发，生成流畅的文字。文学写作涉及更细微的表达差别：同一个词、一次停顿、一个被人物注意或忽略的物件，都可能改变阅读感受。相较于代码和数学，文学的目标与评价更开放，也更难形成清楚的验证闭环。我们因此研究更充分的 harness，让创作依据、人物状态、情节推进与编辑审读共同约束作品。</p>
+    <p>文学除了已有文字的规范，还需要与生活相连的感知。我们尝试参照具身世界模型和 VLM 领域的思路，在写作中加入模拟想象与感知的过程：环境怎样变化，身体怎样受到影响，不同人物怎样注意、理解和回应同一件事。这些材料可以帮助描写与人物交互，也可以使模型持续关注故事中的行动、关系和情绪。目前使用局部规则模拟与文本 embedding；多模态感知仍是研究方向。</p>
+    <p>研究对象是五个边界尚不明确的中文文学层次。这组层次用于讨论创作能力，不代表公认的作家排名。第一阶段以第三层次为目标：形成完整世界、人物情绪与自己的语言，同时继承类型小说的悬念、能力表现、对抗和阶段满足，均衡商业价值与文学价值。是否达到这一目标，需要作品阅读和真实反馈判断。</p>
+  </section>
+  <section class="samples" aria-labelledby="sample-title">
+    <h2 id="sample-title">《炉下有河》</h2>
+    <div class="note">工业玄幻 · 悬疑对抗 · 长篇开篇节选</div>
+    <div class="note">AI辅助创作，经过编辑审读。样例是研究中的作品。</div>
+    <nav aria-label="样例阅读">
+      <a href="samples/ch01.txt" data-sample="ch01" data-title="第一章 四辆都上去了">阅读第一章</a>
+      <a href="samples/ch07.txt" data-sample="ch07" data-title="第七章 这回他来取">阅读第七章</a>
+    </nav>
+    <div class="note reader-status" id="status" role="status" aria-live="polite">选择一章阅读；链接也可以直接打开纯文字样例。</div>
+    <article id="reading" aria-label="作品正文"></article>
+  </section>
+  <footer>公开页面展示研究方向与作品样例。作品试用平台目前为本地原型，尚未开放公众服务。</footer>
+</main>
+<script>
+const reading = document.getElementById("reading");
+const status = document.getElementById("status");
+document.querySelectorAll("a[data-sample]").forEach(link => {
+  link.addEventListener("click", async event => {
+    event.preventDefault();
+    status.textContent = "正在读取作品……";
+    const response = await fetch(link.getAttribute("href"), {cache:"no-cache"});
+    if (!response.ok) { status.textContent = "暂时无法读取，请直接打开作品链接。"; throw new Error("作品读取失败：" + response.status); }
+    const text = await response.text();
+    reading.replaceChildren();
+    const title = document.createElement("h3");
+    title.textContent = link.dataset.title;
+    reading.append(title);
+    text.split(/\r?\n\s*\r?\n/).forEach(block => {
+      if (!block.trim() || block.startsWith("# ") || block.startsWith("AI辅助创作")) return;
+      const paragraph = document.createElement("p");
+      paragraph.textContent = block.trim();
+      reading.append(paragraph);
+    });
+    status.textContent = link.dataset.title + " · AI辅助创作，经过编辑审读";
+    reading.scrollIntoView({behavior:"smooth", block:"start"});
+  });
+});
+</script>
+</body>
+</html>
