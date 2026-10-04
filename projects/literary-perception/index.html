@@ -35,7 +35,8 @@
   <div class="eyebrow">CHINESE LITERARY PERCEPTION</div>
   <h1>文学与感知</h1>
   <div class="subtitle">中文长篇小说 · 创作研究</div>
-  <nav aria-label="项目导航"><a href="usage.html">使用指南</a><a href="platform.html">作品生成平台</a><a href="https://github.com/r7657574-cmd/r7657574-cmd.github.io/tree/main/projects/literary-perception">GitHub 展示目录</a></nav>
+  <nav aria-label="项目导航"><a href="usage.html">使用指南</a><a href="platform.html#access">生成服务说明</a><a href="platform.html#feedback">公开读者反馈</a><a href="https://github.com/r7657574-cmd/r7657574-cmd.github.io/tree/main/projects/literary-perception">GitHub 展示目录</a></nav>
+  <p class="note">当前公开功能为作品阅读、使用说明与 GitHub 阅读反馈。公众在线生成尚未开放；已取得私有程序的使用者可按指南在本机创作。</p>
   <section class="intro" aria-label="研究介绍">
     <p>语言模型已经能够从一个要求出发，生成流畅的文字。文学写作涉及更细微的表达差别：同一个词、一次停顿、一个被人物注意或忽略的物件，都可能改变阅读感受。相较于代码和数学，文学的目标与评价更开放，也更难形成清楚的验证闭环。我们因此研究更充分的 harness，让创作依据、人物状态、情节推进与编辑审读共同约束作品。</p>
     <p>文学除了已有文字的规范，还需要与生活相连的感知。我们尝试参照具身世界模型、VLM 与多智能体领域的思路，在写作中加入模拟想象、感知和相互回应：环境自行变化，各个人物带着不同的身体条件、经历和目的，感知彼此及外界，再作出自己的行动。身体余效与环境背景、氛围共同影响注意、词语、句群和对白，让人物处境进入文字气质。这些材料也可以进入记忆、隐喻与其他文学表达，使模型持续关注故事中的关系。目前使用局部多人规则模拟与文本 embedding；多模态感知仍是研究方向。</p>
@@ -58,10 +59,29 @@
       <a href="samples/ch10.txt" data-sample="ch10" data-title="第十章">第十章</a>
     </nav>
     <p class="note"><a href="samples/under-furnace.txt" download>下载十章全文</a></p>
-    <div class="note reader-status" id="status" role="status" aria-live="polite">选择一章阅读；链接也可以直接打开纯文字样例。</div>
-    <article id="reading" aria-label="作品正文"></article>
   </section>
-  <footer>用户无需提供特定提示或指定参考文章，即可由系统提出原创方向。内部使用创作说明、harness 与文学机制研究。完整流程保持私有；公开页面提供作品、指南与平台说明。</footer>
+  <section class="samples" aria-labelledby="night-title">
+    <h2 id="night-title">《万山夜行》</h2>
+    <div class="note">山神与影术 · 家庭与救援 · 十章完整开篇 · 正文29,621汉字</div>
+    <div class="note">AI辅助创作，经过编辑审读。当前样例采用2026年10月4日持续感知修订稿。</div>
+    <p class="note">具身与感知材料覆盖十章中的24个场景，包含交锋、交易、等待、独处、家庭照护和技巧成功。写作者在修订前完整读取49份个人视图，依据身体余效、环境变化、各人所知与本人经验，在18个场景修改注意、心理、对白或句群，6个场景保留原文。情绪与措辞由写作者组织，程序不直接判定文学效果；这些数量不等于全文逐句经过模拟。</p>
+    <nav aria-label="万山夜行样例阅读">
+      <a href="samples/night-mountains/ch01.txt" data-sample="night-ch01" data-title="万山夜行 · 第一章 花市的影子">阅读第一章</a>
+      <a href="samples/night-mountains/ch02.txt" data-sample="night-ch02" data-title="万山夜行 · 第二章 借路的人">第二章</a>
+      <a href="samples/night-mountains/ch03.txt" data-sample="night-ch03" data-title="万山夜行 · 第三章 妹妹的选择">第三章</a>
+      <a href="samples/night-mountains/ch04.txt" data-sample="night-ch04" data-title="万山夜行 · 第四章 闻越的价钱">第四章</a>
+      <a href="samples/night-mountains/ch05.txt" data-sample="night-ch05" data-title="万山夜行 · 第五章 取回兽心">第五章</a>
+      <a href="samples/night-mountains/ch06.txt" data-sample="night-ch06" data-title="万山夜行 · 第六章 山神开口">第六章</a>
+      <a href="samples/night-mountains/ch07.txt" data-sample="night-ch07" data-title="万山夜行 · 第七章 一只手">第七章</a>
+      <a href="samples/night-mountains/ch08.txt" data-sample="night-ch08" data-title="万山夜行 · 第八章 灯下的人">第八章</a>
+      <a href="samples/night-mountains/ch09.txt" data-sample="night-ch09" data-title="万山夜行 · 第九章 带你回家">第九章</a>
+      <a href="samples/night-mountains/ch10.txt" data-sample="night-ch10" data-title="万山夜行 · 第十章 走向青山">第十章</a>
+    </nav>
+    <p class="note"><a href="samples/night-mountains.txt" download>下载《万山夜行》十章全文</a></p>
+  </section>
+  <div class="note reader-status" id="status" role="status" aria-live="polite">选择一章阅读；链接也可以直接打开纯文字样例。</div>
+  <article id="reading" aria-label="作品正文"></article>
+  <footer>创作流程允许用户留空具体方向，由系统提出原创方向；内部使用创作说明、harness 与文学机制研究。完整流程保持私有；公开页面提供作品、指南、平台说明与阅读反馈入口。</footer>
 </main>
 <script>
 const reading = document.getElementById("reading");

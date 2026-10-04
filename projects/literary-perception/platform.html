@@ -1,8 +1,30 @@
 <!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>作品生成平台 · 文学与感知</title><style>
-body{margin:0;background:#f6f3ec;color:#272822;font:17px/1.9 system-ui,"Microsoft YaHei",sans-serif}main{max-width:840px;margin:auto;padding:40px 24px 72px}a{color:#37614b}h1{font-weight:600}h2{margin-top:32px;font-weight:500}.entry{display:inline-block;border:1px solid #b8c6b9;padding:12px 22px;border-radius:5px;text-decoration:none}.note{color:#62665c;font-size:15px}nav{display:flex;gap:24px;flex-wrap:wrap}footer{border-top:1px solid #d8d6cc;margin-top:40px;padding-top:18px;font-size:14px}
-</style></head><body><main><nav><a href="index.html">项目主页</a><a href="usage.html">使用指南</a></nav><h1>作品生成平台</h1><p>本机平台使用用户自己的 ChatGPT 账户，通过官方 Codex 接入写作流程。生成界面提供题材、创作目标、篇幅及个人要求，完成后显示最终作品；准备、候选和各代理审稿不在作品页面输出。</p>
-<p><a class="entry" href="http://127.0.0.1:8765/">打开已启动的本机平台</a></p><p class="note">这个地址指向你自己的电脑。需安装官方 Codex，并启动获提供的私有项目平台程序；仅打开本页不会安装或启动服务。完整流程尚未提供公开下载。</p>
-<h2>账户登录与额度</h2><p>登录由官方 Codex 完成，账户权限与使用额度由 OpenAI 决定。平台不要求提供 ChatGPT 密码或网页 cookie，也不会把本机登录凭证上传到项目主页。模型须由当前账户提供，默认使用 GPT-6.1-sol。</p><p>OpenAI 已公布本机接入与开放源码应用的 ChatGPT 套餐授权方式；远程托管或收费应用需要相应接入资格。当前公开站点提供阅读和说明，公众在线生成服务尚未开放。</p>
-<h2>隐私与作品</h2><p>中间材料在本机私有项目中处理；隐藏界面内容不构成对电脑拥有者的文件保密。服务所需处理、项目作者研究阅读、用作品改进流程、训练模型及公开作品需要区分授权。用户可保留自己的作品并提交具体反馈，研究同意默认关闭。</p>
-<h2>官方接入依据</h2><p><a href="https://learn.chatgpt.com/docs/auth">Codex 账户登录</a> · <a href="https://learn.chatgpt.com/docs/app-server">Codex App Server</a> · <a href="https://developers.openai.com/siwc/token-sharing-open-source">ChatGPT 套餐授权说明</a> · <a href="https://developers.openai.com/siwc/request-client-id">网站接入资格</a></p><footer>本页说明真实运行方式与开放范围。请在本机平台已启动后使用入口。</footer></main></body></html>
+body{margin:0;background:#f6f3ec;color:#272822;font:17px/1.9 system-ui,"Microsoft YaHei",sans-serif}main{max-width:840px;margin:auto;padding:40px 24px 72px}a{color:#37614b}h1{font-weight:600}h2{margin-top:32px;font-weight:500}.entry,button{display:inline-block;border:1px solid #b8c6b9;padding:12px 22px;border-radius:5px;text-decoration:none;background:#fff;color:#272822;font:inherit}.note{color:#62665c;font-size:15px}nav{display:flex;gap:24px;flex-wrap:wrap}footer{border-top:1px solid #d8d6cc;margin-top:40px;padding-top:18px;font-size:14px}label{display:block;margin-top:16px}input,select,textarea{box-sizing:border-box;width:100%;padding:10px;border:1px solid #b8c6b9;border-radius:4px;background:#fff;font:inherit}textarea{min-height:130px}button{margin-top:18px;cursor:pointer}code{background:#e8e6de;padding:2px 5px}.status{border-left:3px solid #37614b;padding-left:16px}
+</style></head><body><main><nav><a href="index.html">项目主页</a><a href="usage.html">使用指南</a><a href="#feedback">阅读反馈</a></nav><h1>阅读、创作与反馈</h1>
+<p class="status">当前可公开阅读两部十章开篇并提交阅读反馈。公众在线生成尚未开放；完整写作流程保存在私有项目中。</p>
+<section id="access"><h2>从公开网址进入创作</h2><p>公众服务拟提供这样的使用方式：登录自己的 ChatGPT 账户，授权使用自己的套餐，填写题材、目标和篇幅，等待创作完成，再阅读、复制或下载文章。用户无需填写 API key。网站登录与使用 ChatGPT 套餐是分别授权的能力。</p><p>远程托管应用使用 ChatGPT 套餐需要获得 OpenAI 的接入资格，见<a href="https://developers.openai.com/siwc/token-sharing-open-source">官方套餐授权说明</a>与<a href="https://developers.openai.com/siwc/website">网站登录说明</a>。本项目尚未取得该资格或部署多用户生成服务，所以目前没有可用的公众登录生成按钮。</p><p>现有 GitHub Pages 已提供公开网址，可以继续用于阅读、介绍和反馈。自有域名可让网址更易记；生成服务另需 HTTPS 后端、每位用户的账户授权、作品访问权限和作业管理。注册域名不会自动提供这些功能。</p></section>
+<section id="local"><h2>已取得私有程序的本机使用者</h2><ol><li>安装官方 Codex CLI，并通过官方页面登录自己的 ChatGPT 账户。</li><li>在私有项目的 <code>projects/literary-perception-lab</code> 目录安装依赖：<code>python -m pip install -e '.[platform]'</code>。</li><li>执行 <code>python platform/run_server.py</code>，在自己的浏览器打开 <code>http://127.0.0.1:8765</code>。</li><li>刷新账户状态，选择账户实际可用的 GPT-6.1-sol，填写创作要求与篇幅，确认服务处理同意后生成。</li><li>完成后阅读、复制或下载正文；作品下方“阅读意见”保存在该电脑中。</li></ol><p class="note">127.0.0.1 始终指向访问者自己的电脑。仅浏览本网站不会获得或启动私有程序。本机每次创作100至5000汉字，研究阅读授权默认关闭；本机反馈不会自动传给项目作者。</p></section>
+<section id="delivery"><h2>作品交付范围</h2><p>对外服务的设计范围是用户自己的最终文章、作业状态、下载文件及反馈回执。准备材料、候选、模拟结果和审稿记录由服务器内部保存，不向浏览器提供读取接口；每份作品需要检查用户归属。</p><p>完整程序运行在使用者电脑上时，电脑拥有者可以检查文件和运行过程。为了减少中间资料曝光，公众创作需要将私有流程放在受控服务器上。模型服务仍会接收必要提示与材料，内部提示的绝对保密尚未得到验证。</p><p>项目作者私有阅读作品及用作品改进流程，需要用户单独同意；模型训练和公开作品分别授权。用户自己填写的反馈与授权不会由公开主页自动收集。</p></section>
+<section id="feedback"><h2>公开阅读反馈</h2><p>可以通过 GitHub Issues 提交两篇样例的阅读感受和使用问题。填写下方内容后打开草稿，在 GitHub 中检查并提交；需要 GitHub 账户。反馈公开可见，请填写愿意公开的内容。</p>
+<form id="feedback-form"><label for="feedback-work">作品或问题</label><select id="feedback-work" name="work"><option>万山夜行</option><option>炉下有河</option><option>平台使用问题</option></select><label for="feedback-chapter">章节与位置</label><input id="feedback-chapter" name="chapter" maxlength="60" placeholder="例如：第三章，窗口交谈"><label for="feedback-text">阅读感受、原句或建议</label><textarea id="feedback-text" name="text" maxlength="500" required placeholder="指出准确位置，以及读到这里的感受或疑问。可以在 GitHub 编辑器继续补充。"></textarea><button type="submit">打开 GitHub 反馈草稿</button><p id="feedback-status" class="note" role="status" aria-live="polite"></p></form>
+<p><a href="https://github.com/r7657574-cmd/r7657574-cmd.github.io/issues">查看已有公开反馈</a> · <a href="https://github.com/r7657574-cmd/r7657574-cmd.github.io/issues/new">直接填写 GitHub Issue</a></p></section>
+<h2>官方本机接入依据</h2><p><a href="https://learn.chatgpt.com/docs/app-server">Codex App Server</a> · <a href="https://developers.openai.com/siwc/token-sharing-open-source/codex-app-server">ChatGPT 套餐与 App Server</a></p><footer>AI辅助创作，经过编辑审读。当前公众功能为作品阅读、说明和公开反馈。</footer></main>
+<script>
+function createFeedbackUrl(work, chapter, text) {
+  const issue = new URL('https://github.com/r7657574-cmd/r7657574-cmd.github.io/issues/new');
+  issue.searchParams.set('title', '[文学与感知] ' + work + (chapter ? ' · ' + chapter : ''));
+  issue.searchParams.set('body', '作品或问题：' + work + '\n章节与位置：' + (chapter || '未填写') + '\n\n阅读感受与建议：\n' + text + '\n\n来自文学与感知项目的公开反馈页面。');
+  return issue.href;
+}
+document.getElementById('feedback-form').addEventListener('submit', function (event) {
+  event.preventDefault();
+  const form = new FormData(event.currentTarget);
+  const text = String(form.get('text')).trim();
+  if (!text) {
+    document.getElementById('feedback-status').textContent = '请填写阅读感受或问题。';
+    return;
+  }
+  window.location.assign(createFeedbackUrl(String(form.get('work')), String(form.get('chapter')).trim(), text));
+});
+</script></body></html>
